@@ -1,1 +1,30 @@
+.hidden {
+    display: none;
+}
 
+
+.titleHero{
+    display: flex;
+    justify-content: center;
+}
+
+#concertfinder{
+    border: rgb(253, 252, 252) 2px ridge;
+    font-size: 50px;
+}
+
+#concertfindertitle{
+    position: relative ;
+    top: 10px;
+    color: rgb(248, 246, 245);
+    font-size: 35px;
+    font-weight: bolder;
+}
+#subHead{
+    position: relative;
+    top: -45px;
+}
+.hero-body{
+    padding-bottom: 0px;
+    padding-top: 30px;
+}
