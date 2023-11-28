@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css">
     <link rel="stylesheet" href="./ConcertFinder/Assets/CSS/styling.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./Assets/CSS/styling.css">
     
     <title>Concerfinder</title>
 </head>
@@ -49,7 +52,21 @@
                         </form>
                     </div>
 
-                    <div id="map">Map box</div>
+                    
+                    <div id="mapboxarea">
+                    <div id="map" style='width: 400px; height: 300px;'></div>
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHNvbmNvZGVzIiwiYSI6ImNscGhoNzdmMTAyNjUycW9oYjhjcjN6ZmMifQ.5dF1EeA8M509DfFEV1Uf6g';
+
+                        const map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/light-v11',
+                        center: [-96, 37.8],
+                        zoom: 3
+                        });
+                    </script>
+                    </div>
+                    
                     
                     <!--Search history-->
                     <div class="notification has-background-grey-lighter" id="search-history">
