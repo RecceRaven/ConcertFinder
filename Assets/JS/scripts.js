@@ -21,5 +21,14 @@ $(document).ready(function() {
     };
 });
 
+mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHNvbmNvZGVzIiwiYSI6ImNscGhoNzdmMTAyNjUycW9oYjhjcjN6ZmMifQ.5dF1EeA8M509DfFEV1Uf6g';
+
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v11',
+center: [-96, 37.8],
+zoom: 3
+});
+
 
 
