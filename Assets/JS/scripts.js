@@ -21,14 +21,26 @@ $(document).ready(function() {
     };
 });
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHNvbmNvZGVzIiwiYSI6ImNscGhoNzdmMTAyNjUycW9oYjhjcjN6ZmMifQ.5dF1EeA8M509DfFEV1Uf6g';
+//mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHNvbmNvZGVzIiwiYSI6ImNscGhoNzdmMTAyNjUycW9oYjhjcjN6ZmMifQ.5dF1EeA8M509DfFEV1Uf6g';
 
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/light-v11',
-center: [-96, 37.8],
-zoom: 3
-});
+//const map = new mapboxgl.Map({
+//container: 'map',
+//style: 'mapbox://styles/mapbox/streets-v12',
+//center: [-96, 37.8],
+//zoom: 3
+//});
 
+//map.addControl(
+    //new mapboxgl.GeolocateControl({
+    //positionOptions: {
+    //enableHighAccuracy: true
+    //},
+    // When active the map will receive updates to the device's location as it changes.
+    trackUserLocation: true,
+    // Draw an arrow next to the location dot to indicate which direction the device is heading.
+    showUserHeading: true
+    //})
+    //);
 
+   
 
