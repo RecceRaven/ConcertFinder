@@ -13,7 +13,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./Assets/CSS/styling.css">
     
-    <title>Concerfinder</title>
+    <title>ConcertFinder</title>
 </head>
 <body>
 
@@ -53,82 +53,19 @@
                     </div>
 
                     
-                    
+                    <div id="mapboxarea">
                     <div id="map" style='width: 400px; height: 300px;'></div>
-                    
                     <script>
                         mapboxgl.accessToken = 'pk.eyJ1IjoiandhdHNvbmNvZGVzIiwiYSI6ImNscGhoNzdmMTAyNjUycW9oYjhjcjN6ZmMifQ.5dF1EeA8M509DfFEV1Uf6g';
 
                         const map = new mapboxgl.Map({
                         container: 'map',
-                        style: 'mapbox://styles/mapbox/streets-v12',
-                        zoom: 10,
-                        center: [-73.950863,40.734917],
-                        projection: 'globe'
-                    });
-                     
-                    const boroughs = [
-                        {
-                            name:'Brooklyn',
-                            color:'',
-                            lngLat: [-73.968815,40.641509]
-                        },
-                        {
-                            name:'Manhattan',
-                            color:'',
-                            lngLat: [-73.884065, 40.777548]
-                        },
-                        {
-                            name:'Queens',
-                            color:'',
-                            lngLat: [-73.884065,40.735190]
-                        },
-                        {
-                            name:'Staten Island',
-                            color:'',
-                            lngLat: [-74.138642,40.594421]
-                        },
-                        {
-                            name:'The Bronx',
-                            color:'',
-                            lngLat: [-73.901795,40.837730]
-                        }
-                    ]
-
-                    boroughs.forEach(({ name, lngLat }) => {
-                        const popup = new mapboxgl.Popup({ offset: 25 }).setText(name);
-                        
-                        new mapboxgl.Marker({
-                            scale: 0.6           //when ticketmaster or whatever generates lat and longs, compile them in a string and the 
-                                                 //name function here will be replaced with 0,1,2 in accordance with where they stand in the array
-                        })
-                            .setLngLat(lngLat)
-                            .setPopup(popup)
-                            .addTo(map);
-                        
-
-                    })
-                        
-                    
-                    //new mapboxgl.Marker()
-                        //.setLngLat([12.554729, 55.70651])
-                        //.addTo(map);
-
-                        //map.addControl(
-                        //new mapboxgl.GeolocateControl({
-                        //positionOptions: {
-                        //enableHighAccuracy: true
-    //},
-    // When active the map will receive updates to the device's location as it changes.
-                        //trackUserLocation: true,
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-                        //showUserHeading: true
-                       // })
-                        //);
-
-                        
+                        style: 'mapbox://styles/mapbox/light-v11',
+                        center: [-96, 37.8],
+                        zoom: 3
+                        });
                     </script>
-                    
+                    </div>
                     
                     
                     <!--Search history-->
@@ -144,43 +81,27 @@
                     <div class="notification is-warning is-size-7" id="search-results-container" style="display: none;">
                         <div class="columns is-multiline" id="search-results" style="background-color: rgb(7, 8, 8);"></div>
                     </div>
-                
+
+                <!-- Displays Genres-->
                     <label for="genres">Select a Genre:</label>
                     <select id="genres">
                         <option value="pop">Pop</option>
-                        <option value="rock">Rock</option>
-                        <option value="hip-hop">Hip Hop</option>
-                        <option value="jazz">Jazz</option>
-                        <option value="country">Country</option>
-                
+                            <option value="rock">Rock</option>
+                                <option value="hip-hop">Hip Hop</option>
+                                     <option value="jazz">Jazz</option>
+                                        <option value="country">Country</option>
+
+                <!-- Labels for Year, Month & Day for JS-->
                         <label for="year">Year:</label>
                           <select id="year">
                             </select>
-                        <label for="month">Month:</label>
-                        <select id="month">
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                        </select>
-                    
-                        <label for="day">Day:</label>
-                        <select id="day">
-                            <!-- You can generate these options dynamically using JavaScript for the number of days in a month -->
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
+                                <label for="month">Month:</label>
+                                    <select id="month">
+                                        </select>
+                                            <label for="day">Day:</label>
+                                                <select id="day">
+                                                    </select>
 
-                            <!-- Add more days as needed -->
-                        </select>
                         </div>
                                 </div>
                                 
@@ -193,7 +114,8 @@
             </div>
         </div>
     </section>
-    <script src="./Assets/JS/scripts.js"></script>
+    <script src="./scriptGS.js"></script>
+    
  
 </body>
 </html>
