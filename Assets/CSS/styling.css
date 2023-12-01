@@ -1,13 +1,11 @@
 :root {
-    background-color: black;
+    background-color: #0d0b0b ;
     font-family: 'Permanent Marker', cursive;
     --darkpink: #f765b8;
     --lightpink: #f98dc9;
     --lightblue: #d7fffe;
     --babyblue: #a8f6f8;
     --teal: #27fdf5;
-
-    
 }
 
 h1 {
@@ -16,7 +14,7 @@ h1 {
     text-align: center;
     text-shadow: 0px 0px 5px var(--babyblue);
     color: var(--teal);
-    background: linear-gradient(to bottom, #000000 0%, var(--darkpink) 50%, #000000 100%);
+    background: linear-gradient(to bottom, #0d0b0b 0%, var(--darkpink) 50%, #0d0b0b 100%);
 }
 
 form {
@@ -31,15 +29,15 @@ form label {
 }
 
 #search-form {
-   font-size: 35px;
-   text-align: center;
+    font-size: 35px;
+    text-align: center;
     padding: 20px;
 }
 
 #searchButton {
     font-family: 'Permanent Marker', cursive;
-    color:var(--teal);
-    background-color: #000000;
+    color: var(--teal);
+    background-color: #0d0b0b;
     border-style: none;
     transition-duration: 250ms;
     font-size: 30px;
@@ -53,31 +51,18 @@ form label {
     background-color: var(--teal);
 }
 
-#search-input {
-    display: block;
-    font-family: 'Permanent Marker', cursive;
-    line-height: 30px;
-    font-size: 20px;
-    text-align: center;
-    margin:auto;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(51, 51, 51);
-    color: var(--teal);
-    border-radius: 5px;
-    border-style: none;
-}
-
+#search-input,
 #artist-input {
     display: block;
     font-family: 'Permanent Marker', cursive;
     line-height: 30px;
     font-size: 20px;
     text-align: center;
+    margin: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(51, 51, 51);
-    color: var(--teal);
+    background-color: rgb(219, 219, 219);
+    color: black;
     border-radius: 5px;
     border-style: none;
 }
@@ -94,4 +79,34 @@ form label {
 #concert-results {
     color: var(--babyblue);
     text-align: center;
+}
+
+/* Light mode styling */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #0d0b0b;
+    color: #ffffff;
+}
+
+/* Switch styling */
+#mode-switch {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--teal);
+    background-color: #0d0b0b;
+    border-style: none;
+    transition-duration: 250ms;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#mode-switch:hover {
+    color: black;
+    background-color: var(--teal);
 }

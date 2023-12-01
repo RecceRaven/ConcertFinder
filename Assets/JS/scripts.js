@@ -111,5 +111,14 @@ mapboxgl.accessToken = mapboxAccessToken;
                 map.fitBounds(bounds, { padding: 50 });
             }
         }
+
+// Toggle between light and dark mode    
+document.getElementById('mode-switch').addEventListener('click', toggleMode);
+
+function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+    
        
        
