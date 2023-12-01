@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Commodus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Luckiest+Guy&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./stylefinal.css">
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mr. Commodus</h1>
+
+    <form id="search-form">
+        <label for="search-input">City</label>
+        <input type="text" id="search-input" placeholder="">
+        
+        <label for="artist-input">Keyword</label>
+        <input type="text" id="artist-input" placeholder="">
+
+        <button id="searchButton" type="submit">Search Events</button>
+    </form>
+
+    <div id="concert-results">
+    </div>
+
+    <div id="map"></div> 
+    <button id="mode-switch">Dark/Light Mode</button>
+    <script src="./scriptfinal.js"></script>
+
+</body>
+</html>
