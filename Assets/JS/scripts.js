@@ -20,15 +20,20 @@ mapboxgl.accessToken = mapboxAccessToken;
             });
         });
 
-        function searchConcerts(city, artist) {
+        function searchConcerts(city, artist, genre) {
             let url = `${endpoint}?apikey=${apiKey}&city=${city}`;
             
             if (artist) {
                 // Include artist in the search if provided
                 url += `&keyword=${artist}`;
             }
+            if (genre) {
+                // Include keyword in the search if provided
+                url += `&keyword=${genre}`;
+            }
+            
 
-            $.ajax({
+            $.get({
                 url: url,
                 type: 'GET',
                 success: function (response) {
@@ -76,7 +81,8 @@ mapboxgl.accessToken = mapboxAccessToken;
                             type: 'Feature',
                             geometry: {
                                 type: 'Point',
-                                coordinates: coordinates
+                                coordinates: coordinates,
+                                
                             },
                             properties: {
                                 title: event.name,
@@ -105,4 +111,5 @@ mapboxgl.accessToken = mapboxAccessToken;
                 map.fitBounds(bounds, { padding: 50 });
             }
         }
+       
        
