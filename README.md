@@ -22,11 +22,15 @@ TO run this application, you must follow the link in the Additional Resources se
     
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+![commodussplash](https://github.com/RecceRaven/ConcertFinder/assets/149850541/115cf00b-0388-4efb-9a46-a4f75008de8b)
+
+![comscreeen](https://github.com/RecceRaven/ConcertFinder/assets/149850541/d91a2266-077b-463e-b043-4129bb6aeb9c)
+
 
 ## Additional Resources
 
-Deployment link:
+Deployment link: https://recceraven.github.io/ConcertFinder/
 
 ## Credits
 
